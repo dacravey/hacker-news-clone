@@ -3,7 +3,12 @@ hackedNews.factory('ArticlesFactory', function ArticlesFactory() {
   factory.articles = [];
 
   factory.addArticle = function() {
-    factory.articles.push({ name: factory.articleName, link: factory.articleLink, id: factory.articles.length + 1, vote: 0,  comments: []});
+    factory.articles.push({ name: factory.articleName,
+      link: factory.articleLink,
+      id: factory.articles.length + 1,
+      vote: 0,
+      comments: []
+    });
     factory.articleName = null;
     factory.articleLink = null;
     console.log(factory.articles);
@@ -14,8 +19,6 @@ hackedNews.factory('ArticlesFactory', function ArticlesFactory() {
     console.log(article);
     console.log(factory.articles);
   };
-
-
 
   return factory;
 });
