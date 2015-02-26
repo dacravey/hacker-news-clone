@@ -1,7 +1,7 @@
 hackedNews.factory('ArticlesFactory', function ArticlesFactory() {
   var factory = {};
   factory.articles = [];
-  factory.addArticles = function() {
+  factory.addArticle = function() {
     factory.articles.push({ name: factory.articleName, link: factory.articleLink, id: factory.articles.length + 1 });
     factory.articleName = null;
     console.log(factory.articles);
