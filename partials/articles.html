@@ -1,0 +1,21 @@
+<div ng-show="articles.length">
+  <h1>Hactickle List:</h1>
+  <ul>
+    <li ng-repeat="item in articles">
+      <a ui-sref="">{{ item.name }}</a>
+    </li>
+  </ul>
+</div>
+
+<div class="col-md-4">
+  <h3>Add a new hactickle</h3>
+  <form ng-submit="ArticlesFactory.addArticle()" class="form-inline" role="form">
+    <div class="form-group">
+      <input type="text" ng-model="ArticlesFactory.articleName" class="form-control" placeholder="hacktickle name">
+      <input type="text" ng-model="ArticlesFactory.articleLink" class="form-control" placeholder="hacktickle link">
+    </div>
+    <button type="submit" class="btn btn-default">Add Article</button
+  </form>
+</div>
+
+<div ui-view></div>
