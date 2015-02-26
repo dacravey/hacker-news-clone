@@ -2,7 +2,7 @@
   <h1>Hactickle List:</h1>
   <ul>
     <li ng-repeat="item in articles">
-      <span ng-click="ArticlesFactory.articleAddVote(item)" class="glyphicon glyphicon-heart-empty"></span> <a href="{{item.link}}" target="blank">{{ item.name }}</a>
+      <span ng-click="ArticlesFactory.articleAddVote(item)" class="glyphicon glyphicon-heart-empty"></span> Votes: ({{item.counter}}) - <a href="{{item.link}}" target="blank">{{ item.name }}</a>
     </li>
   </ul>
 </div>
