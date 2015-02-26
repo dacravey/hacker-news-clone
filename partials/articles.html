@@ -3,6 +3,9 @@
   <ul>
     <li ng-repeat="item in articles | orderBy:'vote':true">
       <span ng-click="ArticlesFactory.articleAddVote(item)" class="glyphicon glyphicon-heart-empty"></span> Votes: ({{item.vote}}) - <a href="{{item.link}}" target="blank">{{ item.name }}</a>
+      <div class="comments">
+        ({{item.comments.length}}) <a ui-sref="comments({ id: item.id})">comments</a>
+      </div>
     </li>
   </ul>
 </div>
