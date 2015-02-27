@@ -1,5 +1,6 @@
 hackedNews.controller('CommentsCtrl', function CommentsCtrl($scope, $stateParams, ArticlesFactory, UtilitiesFactory) {
   $scope.article = UtilitiesFactory.findById(ArticlesFactory.articles, $stateParams.id);
+  $scope.ArticlesFactory = ArticlesFactory;
 });
 
 
