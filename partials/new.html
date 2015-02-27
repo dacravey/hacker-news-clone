@@ -1,7 +1,7 @@
 <div ng-show="articles.length">
   <h1>Hactickle List:</h1>
   <ul>
-    <li ng-repeat="item in articles | orderBy:'vote':true">
+    <li ng-repeat="item in articles | orderBy:'date':true">
       <span ng-click="ArticlesFactory.articleAddVote(item)" class="glyphicon glyphicon-heart-empty"></span> Votes: ({{item.vote}}) - <a href="{{item.link}}" target="blank">{{ item.name }}</a>
       <div class="comments">
         ({{item.comments.length}}) <a ui-sref="comments({ id: item.id})">comments</a>
@@ -23,4 +23,5 @@
 
 <h3><a ui-sref="articles">Sorted by popularity</a></h3>
 <h3><a ui-sref="new">Newest articles</a></h3>
+
 <div ui-view> </div>

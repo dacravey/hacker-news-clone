@@ -8,6 +8,7 @@ hackedNews.factory('ArticlesFactory', function ArticlesFactory() {
                               id: factory.articles.length + 1,
                             vote: 0,
                         comments: [],
+                            date: new Date(), 
                         addComment: function(comment) { this.comments.push(comment) }
     });
     factory.articleName = null;

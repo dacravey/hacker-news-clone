@@ -12,6 +12,12 @@ hackedNews.config(function($stateProvider) {
     controller: "ArticlesCtrl"
   });
 
+  $stateProvider.state('new', {
+    url: "/new",
+    templateUrl: "partials/new.html",
+    controller: "ArticlesCtrl"
+  });
+
   $stateProvider.state('comments', {
     url: "/:id",
     templateUrl: "partials/comments.html",
